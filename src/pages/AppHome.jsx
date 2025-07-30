@@ -37,8 +37,9 @@ function AppHome() {
         <button className="border border-blue-500 text-blue-600 px-3 py-2 rounded-3xl text-sm hover:bg-blue-50 lg:w-[20%] w-auto">
           Show Pending Check-in
         </button>
-        <button className="border border-blue-500 text-blue-600 px-3 py-2 rounded-3xl text-sm hover:bg-blue-50 lg:w-[10%] w-auto">
-          ☰ More Filter
+       <button className="flex items-center gap-x-2 whitespace-nowrap border border-blue-500 text-blue-600 px-3 py-2 rounded-3xl text-sm hover:bg-blue-50 lg:w-[10%] w-auto">
+  ☰ More Filter
+
         </button>
       </div>
 

@@ -1,62 +1,72 @@
-import React from 'react'
+import React from 'react';
 
 function DiseaseHistoryForm() {
-
-    const HistoryRow = ({ placeholder }) => (
-  <div className="flex gap-2 items-center mb-2">
-    <input
-      type="text"
-      placeholder={placeholder}
-      className="flex-1 border px-2 py-1 rounded text-sm"
-    />
-    <select className="border px-2 py-1 rounded text-sm text-gray-700">
-      <option>For R/L/B</option>
-    </select>
-    <input
-      type="text"
-      placeholder="Duration"
-      className="w-28 border px-2 py-1 rounded text-sm"
-    />
-    <label className="inline-flex items-center cursor-pointer ml-2">
-      <input type="checkbox" className="sr-only peer" />
-      <div className="w-9 h-5 bg-gray-300 peer-checked:bg-blue-600 rounded-full peer peer-focus:ring-2 peer-focus:ring-blue-500 transition-all"></div>
-    </label>
-  </div>
-);
+  // Row input component
+  const HistoryRow = ({ placeholder }) => (
+    <div className="mb-2 p-2 bg-white rounded shadow">
+      <input
+        type="text"
+        placeholder={placeholder}
+        className="w-full p-2 border border-gray-300 rounded text-sm"
+      />
+    </div>
+  );
 
   return (
     <div className="flex h-screen overflow-hidden">
-      {/* Left: Form Area */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-white">
-        {/* Section: Systemic History */}
-        <div>
-          <h3 className="text-blue-600 text-sm font-semibold mb-2">Systemic History</h3>
-          {[...Array(4)].map((_, i) => (
-            <HistoryRow key={i} placeholder="Systemic History max-250 character" />
-          ))}
-        </div>
+      {/* Main Content Area */}
+      <main className="flex-1 bg-gray-100 overflow-y-auto p-4">
+        {/* White content box */}
+        <div className="bg-white p-6 rounded-lg shadow space-y-6">
+          {/* Patient Header */}
+          <div className="mb-4 flex gap-4 items-start border-b pb-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              alt="Patient"
+              className="w-24 h-24 object-cover rounded shadow"
+            />
+            <div>
+              <p className="text-sm font-medium text-gray-800">
+                Viky viky (75 years, 11 months, Male)
+                <span className="text-green-500 ml-2">+923006578779</span>
+              </p>
+              <p className="text-sm text-gray-700">
+                House No 123, Street No 456, City, Country
+              </p>
+              <p className="text-sm text-gray-500">here some description</p>
+            </div>
+          </div>
 
-        {/* Section: Ocular History */}
-        <div>
-          <h3 className="text-blue-600 text-sm font-semibold mb-2">Ocular History</h3>
-          {[...Array(4)].map((_, i) => (
-            <HistoryRow key={i} placeholder="Ocular History max-250 character" />
-          ))}
-        </div>
+          {/* Systemic History Section */}
+          <div>
+            <h3 className="text-blue-600 text-sm font-semibold mb-2">Systemic History</h3>
+            {[...Array(4)].map((_, i) => (
+              <HistoryRow key={`systemic-${i}`} placeholder="Systemic History max-250 character" />
+            ))}
+          </div>
 
-        {/* Section: Presenting Complaints */}
-        <div>
-          <h3 className="text-blue-600 text-sm font-semibold mb-2">Presenting Complaints</h3>
-          {[...Array(4)].map((_, i) => (
-            <HistoryRow key={i} placeholder="Presenting Complaints max-250 char." />
-          ))}
-        </div>
+          {/* Ocular History Section */}
+          <div>
+            <h3 className="text-blue-600 text-sm font-semibold mb-2">Ocular History</h3>
+            {[...Array(4)].map((_, i) => (
+              <HistoryRow key={`ocular-${i}`} placeholder="Ocular History max-250 character" />
+            ))}
+          </div>
 
-        {/* Add New Disease History */}
-        <div className="text-blue-600 text-sm mt-3 cursor-pointer hover:underline">
-          + add new disease history
+          {/* Presenting Complaints Section */}
+          <div>
+            <h3 className="text-blue-600 text-sm font-semibold mb-2">Presenting Complaints</h3>
+            {[...Array(4)].map((_, i) => (
+              <HistoryRow key={`complaint-${i}`} placeholder="Presenting Complaints max-250 char." />
+            ))}
+          </div>
+
+          {/* Add New Disease History */}
+          <div className="text-blue-600 text-sm mt-3 cursor-pointer hover:underline">
+            + add new disease history
+          </div>
         </div>
-      </div>
+      </main>
 
       {/* Right Panel */}
       <div className="w-[280px] border-l bg-gray-50 flex flex-col overflow-y-auto">
@@ -74,13 +84,13 @@ function DiseaseHistoryForm() {
           <span className="cursor-pointer hover:underline">Diagnostic</span>
         </div>
 
-        {/* Tab Content Placeholder */}
+        {/* Tab Content */}
         <div className="flex-1 p-4 text-center text-gray-400 text-sm">
           No data selected.
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default DiseaseHistoryForm
+export default DiseaseHistoryForm;

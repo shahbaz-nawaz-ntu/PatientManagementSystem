@@ -10,8 +10,8 @@ function AppointmentPage() {
       
       
     {/* Header */}
-    <div className="bg-gradient-to-r from-blue-500 to-green-400 text-white rounded-lg p-4 flex flex-col md:flex-row justify-between items-start md:items-center">
-      <div className="flex items-center space-x-4">
+   <div className="bg-gradient-to-r from-[#403F66] to-[#E69579] text-white rounded-lg p-2 fflexlex flex-col md:flex-row justify-between items-start md:items-center w-full shadow-md">
+      <div className="flex items-center space-x-2">
         <img src="/avatar.png" alt="avatar" className="w-12 h-12 rounded-full" />
         <div>
           <h2 className="text-lg font-semibold">Test (39 years, 11 months Male)</h2>
