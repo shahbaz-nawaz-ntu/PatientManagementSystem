@@ -44,7 +44,7 @@ const Navigation = memo(({ collapsed }) => {
         pagelink:"/patient/visionandrefraction" 
     },
     { icon: FiBell, label: "Examination", 
-        // pagelink:"/todaysreservation" 
+        pagelink:"/patient/examination" 
     },
     { 
       icon: FiUser, 
@@ -222,7 +222,8 @@ const PLayout = () => {
         `}
       >
         
-          <div className='w-full flex items-center justify-between bg-gradient-to-r from-primary to-highlight p-2 rounded'>
+          <div className='w-full flex items-center justify-between bg-gradient-to-r from-primary to-highlight p-2 rounded-md'>
+
                     <div className='flex items-start gap-6 text-white'>
                         <div className='w-[100px] border-2'>
                             <img src="https://img.freepik.com/free-photo/young-adult-enjoying-virtual-date_23-2149328221.jpg?uid=R137875917&ga=GA1.1.2032350152.1743826403&semt=ais_items_boosted&w=740" alt="Patient Management System" className='object-cover' />
@@ -249,7 +250,7 @@ const PLayout = () => {
               <Route path="addnewvisit" element={<ADDNewVisit />} />
               <Route path="visionandrefraction" element={<VisionandRefraction />} />
               <Route path="examination"element={<Examination/>} />
-              </Routes> 
+            </Routes> 
             
             
           </div>

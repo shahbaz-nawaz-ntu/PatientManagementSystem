@@ -14,7 +14,6 @@ import ADDNewVisit from './pages/ADDNewVisit'
 import VisionandRefraction from './pages/VisionandRefraction'
 import AppointmentPage from './pages/AppointmentPage'
 import DiscountTypes from './pages/DiscountTypes'
-import Examination from './pages/Examination'
 
 function App() {
 
