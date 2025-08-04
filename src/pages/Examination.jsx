@@ -4,7 +4,7 @@ function Examination() {
   return (
   <div>
     {/* <div className="p-6 bg-gray-100 min-h-screen"> */}
-      <div className="w-full mx-auto bg-white p-6 rounded shadow">
+      <div className="w-full mx-auto bg-white p-6 rounded shadow px-10">
         {/* Header */}
         {/* <div className="border-b pb-4 mb-6"> */}
           {/* <h2 className="text-2xl font-semibold text-blue-700">Examination Page</h2> */}

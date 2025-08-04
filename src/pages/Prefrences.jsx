@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Prefrences() {
-  return (
-    <div>Prefrences</div>
-  )
+  return <div>Preferences Page</div>;
 }
 
-export default Prefrences
+export default Prefrences;

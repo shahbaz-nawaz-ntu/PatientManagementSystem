@@ -6,6 +6,8 @@ import { Routes, Route, Link } from "react-router-dom";
 import ADDNewVisit from "./ADDNewVisit";
 import VisionandRefraction from "./VisionandRefraction";
 import Examination from "./Examination";
+import DiagnosisForm from "./DiagnosisForm";
+import PrescriptionPage from "./Prescriptionpage";
 
 const useSidebarStore = create((set) => ({
   isOpen: false,
@@ -50,13 +52,13 @@ const Navigation = memo(({ collapsed }) => {
       icon: FiUser, 
       label: "Diagnosis",
     //   subItems: ["Personal Info", "Account Settings", "Privacy"],
-    //   pagelink:"/prefrences"
+      pagelink:"/patient/diagnosisform"
     },
     { 
       icon: FiUser, 
       label: "Prescription",
     //   subItems: ["Personal Info", "Account Settings", "Privacy"],
-    //   pagelink:"/OPD"
+      pagelink:"/patient/Prescriptionpage"
     },
     { 
       icon: FiUser, 
@@ -245,11 +247,14 @@ const PLayout = () => {
             </div><header className="p-2">
         </header>
         <div>
-          <div>
+          <div className="px-5">
             <Routes>
               <Route path="addnewvisit" element={<ADDNewVisit />} />
               <Route path="visionandrefraction" element={<VisionandRefraction />} />
               <Route path="examination"element={<Examination/>} />
+              <Route path="/diagnosisform" element={<DiagnosisForm />} />
+              <Route path="Prescriptionpage" element={<PrescriptionPage />} />
+              
             </Routes> 
             
             

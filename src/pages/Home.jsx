@@ -17,6 +17,9 @@ import PatientList from "./PatientList";
 import AppointmentPage from "./AppointmentPage";
 import DiscountTypes from "./DiscountTypes"
 import Examination from "../pages/Examination"
+import DiagnosisForm from "./DiagnosisForm";
+import PrescriptionPage from "./Prescriptionpage";
+import TodayReservation from "./TodaysReservation";
 
 // Added: Zustand store for sidebar state management
 const useSidebarStore = create((set) => ({
@@ -244,12 +247,13 @@ const Layout = () => {
               <Route path="/dailycashreport" element={<DailyCashReport/>}/>
               <Route path="/patientrecentopd" element={<PatientRecentOPD/>}/>
               <Route path="/opd" element={<OPD/>}/>
-              <Route path="/prefrences" element={<Prefrences />}/>
+              <Route path="/prefrences" element={<Prefrences/>}/>
               <Route path="/todaysreservation" element={<TodaysReservation/>}/>
               <Route path="/addpatient" element={<AddNewPatient />} />
               <Route path="/appointment" element={<AppointmentPage />} />
               <Route path="/discounttypes" element={<DiscountTypes />} />
               <Route path="/examination" element={<Examination />} />
+              <Route path="/TodayReservation" element={<TodayReservation />} />
 
             </Routes>
             
